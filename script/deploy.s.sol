@@ -1,7 +1,7 @@
 pragma solidity >=0.5.0;
 
 import {Script, console} from "forge-std/Script.sol";
-import {IUniswapV2Factory} from "contracts/v2-core/contracts/interfaces/IUniswapV2Factory.sol";
+import {IUniswapV2Factory} from "@uniswap/v2-core/contracts/interfaces/IUniswapV2Factory.sol";
 
 contract DeployScript is Script {
     function setUp() public {}
