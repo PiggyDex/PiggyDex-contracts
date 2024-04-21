@@ -15,7 +15,7 @@ const config: HardhatUserConfig = {
 	},
 	networks: {
 		conflux: {
-			url: "https://evmtestnet.confluxrpc.com",
+			url: process.env.RPC_URL || "https://evmtestnet.confluxrpc.com",
 			accounts:
 				process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
 		},
@@ -25,15 +25,15 @@ const config: HardhatUserConfig = {
 	},
 	etherscan: {
 		apiKey: {
-			espaceTestnet: "espace",
+			conflux: process.env.API_KEY || "everything_is_ok",
 		},
 		customChains: [
 			{
-				network: "espaceTestnet",
-				chainId: 71,
+				network: "conflux",
+				chainId: process.env.CHAIN_ID !== undefined ? parseInt(process.env.CHAIN_ID) : 71,
 				urls: {
-					apiURL: "https://evmapi-testnet.confluxscan.io/api/",
-					browserURL: "https://evmtestnet.confluxscan.io/",
+					apiURL: process.env.API_URL || "https://evmapi-testnet.confluxscan.io/api/",
+					browserURL: process.env.BROWSER_URL || "https://evmtestnet.confluxscan.io/",
 				},
 			},
 		],
