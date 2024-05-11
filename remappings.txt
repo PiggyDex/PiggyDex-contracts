@@ -1,0 +1,5 @@
+forge-std/=lib/forge-std/src/
+uniswap-lib/=lib/uniswap-lib/contracts/
+@uniswap/lib/=lib/uniswap-lib/
+@uniswap/v2-core/=contracts/v2-core/
+@uniswap/v2-periphery/=contracts/v2-periphery/
