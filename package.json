@@ -1,6 +1,6 @@
 {
 	"name": "@piggy-dex/v2-contracts",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "piggy-dex-v2contracts",
 	"license": "MIT",
 	"repository": "https://github.com/PiggyDex/PiggyDex-contracts.git",
@@ -8,6 +8,10 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "forge build --force"
 	},
+	"files": [
+		"out",
+		"contracts"
+	],
 	"keywords": [
 		"piggydex",
 		"piggydex-contracts",
